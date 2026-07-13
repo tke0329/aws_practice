@@ -53,10 +53,10 @@ public class Member extends BaseEntity {
     }
 
     public Collection<? extends GrantedAuthority> getAuthorities() {
-         return getAuthoritiesStringList()
-                 .stream()
-                 .map(SimpleGrantedAuthority::new)
-                 .toList();
+        return getAuthoritiesStringList()
+                .stream()
+                .map(SimpleGrantedAuthority::new)
+                .toList();
     }
 
     public List<String> getAuthoritiesStringList() {
