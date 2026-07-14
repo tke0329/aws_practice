@@ -1,7 +1,7 @@
 'use client'
 
 import { useAuthContext } from '@/global/auth/hooks/useAuth'
-
+import Image from 'next/image'
 import Link from 'next/link'
 
 export default function ClientLayout({
@@ -42,9 +42,10 @@ export default function ClientLayout({
                 className="p-2 rounded hover:bg-gray-100 flex gap-2"
               >
                 <span>{loginMember.nickname}님의 정보</span>
-                <img
+                <Image
                   src={loginMember.profileImageUrl}
-                  width="30"
+                  width={30}
+                  height={30}
                   alt=""
                   className="rounded-full object-cover aspect-[1/1]"
                 />
